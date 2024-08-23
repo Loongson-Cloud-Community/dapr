@@ -322,6 +322,8 @@ func (c *cmdE2EPerf) buildDockerImage(cachedImage string) error {
 		args = append(args, "--platform", c.flags.TargetOS+"/arm64/v8")
 	case "amd64":
 		args = append(args, "--platform", c.flags.TargetOS+"/amd64")
+	case "loong64":
+		args = append(args, "--platform", c.flags.TargetOS+"/loong64")
 	default:
 		args = append(args, "--platform", c.flags.TargetOS+"/amd64")
 	}

@@ -57,6 +57,8 @@ else ifeq ($(shell echo $(LOCAL_ARCH) | head -c 5),arm64)
 	TARGET_ARCH_LOCAL=arm64
 else ifeq ($(shell echo $(LOCAL_ARCH) | head -c 7),aarch64)
 	TARGET_ARCH_LOCAL=arm64
+else ifeq ($(shell echo $(LOCAL_ARCH) | head -c 11),loongarch64)
+	TARGET_ARCH_LOCAL=loong64
 else
 	TARGET_ARCH_LOCAL=amd64
 endif
